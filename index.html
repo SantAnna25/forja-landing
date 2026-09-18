@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FORJA — Treinamento &amp; Performance Coach</title>
+<meta name="description" content="Academia FORJA: transformo esforço em resultados. Treinamento personalizado, hipertrofia, força e condicionamento físico.">
+<link rel="stylesheet" href="css/style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- LOADER -->
+<div class="loader" id="loader">
+  <div class="loader__label loader__label--top"><span>FORJA</span></div>
+  <div class="loader__label loader__label--bottom"><span>Academia &amp; Performance</span></div>
+  <div class="loader__logo">
+    <svg width="56" height="64" viewBox="0 0 197 224" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M101.355 54.4278V76.5316C101.355 85.6704 108.764 93.0789 117.903 93.0789H142.289C146.551 93.0789 150.648 91.435 153.727 88.4894L191.393 52.461C194.657 49.3393 196.503 45.0194 196.503 40.5032V16.5474C196.503 7.40851 189.094 0 179.955 0H155.783C151.395 0 147.186 1.74338 144.083 4.84661L106.202 42.7271C103.099 45.8303 101.355 50.0392 101.355 54.4278Z" fill="#51E076"/>
+      <path d="M142.072 101.353L119.968 101.353C110.83 101.353 103.421 108.761 103.421 117.9L103.421 142.286C103.421 146.548 105.065 150.645 108.011 153.724L144.039 191.39C147.161 194.654 151.481 196.5 155.997 196.5L179.953 196.5C189.091 196.5 196.5 189.091 196.5 179.953L196.5 155.78C196.5 151.392 194.757 147.183 191.653 144.08L153.773 106.199C150.67 103.096 146.461 101.353 142.072 101.353Z" fill="#F7F7F7"/>
+      <path d="M38.6503 26.8896L16.5465 26.8896C7.40768 26.8896 -0.000824298 34.2981 -0.000824698 43.437L-0.000825764 67.8236C-0.00082595 72.0849 1.64316 76.182 4.58872 79.2615L40.6171 116.928C43.7388 120.191 48.0588 122.037 52.5749 122.037L76.5308 122.037C81.6696 122.037 85.7803 117.927 85.7803 112.788L85.7803 88.6161C85.7803 84.3548 84.1373 80.2576 81.1917 77.1781L45.1633 39.5113C42.0416 36.2477 37.7216 34.4017 33.2055 34.4017C31.6901 34.4017 30.1936 34.4666 28.7169 34.5947C24.69 34.9272 21.2218 36.8818 18.9913 39.1123L16.5465 41.5571" fill="#F7F7F7"/>
+      <path d="M-0.000825764 196.501H24.1507C28.5391 196.501 32.748 194.758 35.8512 191.654L54.3762 173.129L96.2852 131.22C99.3884 128.117 101.132 123.908 101.132 119.519V97.4158C101.132 88.277 93.7231 80.8685 84.5843 80.8685L60.4327 80.8685C56.0443 80.8685 51.8354 82.6119 48.7322 85.7151L10.8516 123.596C7.74838 126.699 6.005 130.908 6.005 135.296V157.4C6.005 166.539 13.4135 173.947 22.5523 173.947H31.0139" fill="#51E076"/>
+    </svg>
+  </div>
+  <div class="loader__progress"><span id="loaderBar"></span></div>
+</div>
+
+<div class="noise"></div>
+
+<div class="page">
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <a href="#top" class="header__logo">FORJ<span>A</span></a>
+    <nav class="header__nav">
+      <a href="#sobre">Sobre</a>
+      <a href="#programas">Programas</a>
+      <a href="#resultados">Resultados</a>
+      <a href="#planos">Planos</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <div class="header__btns">
+      <button class="header__burger" id="burger" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- OVERLAY MENU -->
+  <div class="menu" id="menu">
+    <div>
+      <div class="menu__list">
+        <div class="menu__row"><span>01</span><a class="link" href="#sobre">Sobre</a></div>
+        <div class="menu__row"><span>02</span><a class="link" href="#programas">Programas</a></div>
+        <div class="menu__row"><span>03</span><a class="link" href="#resultados">Resultados</a></div>
+        <div class="menu__row"><span>04</span><a class="link" href="#planos">Planos</a></div>
+        <div class="menu__row"><span>05</span><a class="link" href="#contato">Contato</a></div>
+      </div>
+    </div>
+    <div class="menu__bottom">
+      <p class="menu__contact">
+        <span>Connect<b>contato@forja.ac</b></span>
+        <span>WhatsApp<b>+55 11 98765 4321</b></span>
+        <span>Endereço<b>Rua Força Vital, 100 — SP</b></span>
+      </p>
+    </div>
+  </div>
+
+  <main id="top">
+
+    <!-- HERO -->
+    <section class="hero" id="hero">
+      <svg class="hero__rings" viewBox="0 0 1473 1473" fill="none" preserveAspectRatio="none">
+        <circle cx="736.5" cy="732.5" r="594.687" stroke="url(#hg1)" stroke-width="1.13707"/>
+        <circle cx="736.5" cy="732.5" r="665.924" stroke="url(#hg2)" stroke-width="1.15171"/>
+        <circle cx="736.5" cy="732.5" r="731.867" stroke="url(#hg3)" stroke-width="1.26576" shape-rendering="crispEdges"/>
+        <defs>
+          <linearGradient id="hg1" x1="736.5" y1="137.2" x2="736.5" y2="1327.8" gradientUnits="userSpaceOnUse">
+            <stop offset="0.1" stop-color="#181914"/><stop offset="0.37" stop-color="#51E076"/><stop offset="0.57" stop-color="#51E076"/><stop offset="0.9" stop-color="#181914"/>
+          </linearGradient>
+          <linearGradient id="hg2" x1="736.5" y1="66" x2="736.5" y2="1399" gradientUnits="userSpaceOnUse">
+            <stop offset="0.1" stop-color="#181914"/><stop offset="0.37" stop-color="#51E076"/><stop offset="0.57" stop-color="#51E076"/><stop offset="0.9" stop-color="#181914"/>
+          </linearGradient>
+          <linearGradient id="hg3" x1="736.5" y1="0" x2="736.5" y2="1465" gradientUnits="userSpaceOnUse">
+            <stop offset="0.1" stop-color="#181914"/><stop offset="0.37" stop-color="#51E076"/><stop offset="0.57" stop-color="#51E076"/><stop offset="0.9" stop-color="#181914"/>
+          </linearGradient>
+        </defs>
+      </svg>
+
+      <p class="hero__label">Academia &amp; Performance · São Paulo</p>
+
+      <p class="hero__text">
+        Do <em>esforço</em> aos <em>resultados</em>: eu simplifico o <em>complexo</em> e otimizo cada treino para
+        <em>acelerar</em> a sua transformação <em>física</em>.
+      </p>
+
+      <h1 class="hero__title">
+        <span class="w"><span>Treinamento</span></span>
+        <span class="w"><span>e <svg class="icon-lft" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align:baseline;color:var(--white)"><path d="M3.49753 5.24707H5.03059V6.78013H3.49753Z" fill="currentColor"/><path d="M5.24695 5.24707H6.78001V6.78013H5.24695Z" fill="currentColor"/><path d="M6.99582 8.74463H8.52888V10.2777H6.99582Z" fill="currentColor"/><path d="M5.24695 10.4937H6.78001V12.0267H5.24695Z" fill="currentColor"/><path d="M5.24695 0H6.78001V1.53306H5.24695Z" fill="currentColor"/><path d="M0 5.24707H1.533L1.533 6.78013H0Z" fill="currentColor"/><path d="M1.74863 5.24707H3.28168V6.78013H1.74863Z" fill="currentColor"/><path d="M8.74454 3.49756H10.2776V5.03062H8.74454Z" fill="currentColor"/><path d="M6.99582 5.24707H8.52888V6.78013H6.99582Z" fill="currentColor"/><path d="M8.74454 5.24707H10.2776V6.78013H8.74454Z" fill="currentColor"/><path d="M10.4933 5.24707H12.0263V6.78013H10.4933Z" fill="currentColor"/><path d="M6.99582 1.74902H8.52888V3.28208H6.99582Z" fill="currentColor"/><path d="M8.74454 6.99609H10.2776V8.52915H8.74454Z" fill="currentColor"/></svg></span></span>
+        <span class="w t-green"><span>Performance.</span></span>
+      </h1>
+
+      <div class="hero__scroll">
+        <div class="line"></div>
+        Scroll to explore
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="sobre">
+      <div class="eyebrow"><b>01</b> Sobre</div>
+      <p class="about__lead hidden-fade">
+        Eu transformo <em>esforço</em> em <em>resultados</em>, ajudando você a otimizar <em>corpo</em>,
+        <em>disciplina</em> e <em>estratégia</em>. Com uma abordagem direcionada e analítica, construo o seu
+        melhor <em>físico</em> — treino após treino.
+      </p>
+      <div class="about__grid">
+        <div class="about__text hidden-fade">
+          <p>Eu transformo emoção em intensidade, transformando contagens, cargas e movimentos em conquistas claras e acessíveis — para decisões rápidas e estratégicas dentro e fora da academia.</p>
+          <p>Seus resultados começam agora. O seu corpo merece decisões baseadas em dados: eu transformo dificuldades em planos claros e ações concretas para o seu sucesso.</p>
+        </div>
+        <div class="about__stats hidden-fade">
+          <div class="about__stat"><b>12<i>anos</i></b><span>de experiência</span></div>
+          <div class="about__stat"><b>480<i>+</i></b><span>alunos transformados</span></div>
+          <div class="about__stat"><b>25<i>kg</i></b><span>média de perda de gordura</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MID CTA -->
+    <section class="section call-mid" id="callmid">
+      <svg class="call-mid__rings" viewBox="0 0 1473 1473" fill="none" preserveAspectRatio="none">
+        <circle cx="736.5" cy="732.5" r="594.687" stroke="url(#mg1)" stroke-width="1.13707"/>
+        <circle cx="736.5" cy="732.5" r="665.924" stroke="url(#mg2)" stroke-width="1.15171"/>
+        <circle cx="736.5" cy="732.5" r="731.867" stroke="url(#mg3)" stroke-width="1.26576" shape-rendering="crispEdges"/>
+        <defs>
+          <linearGradient id="mg1" x1="736.5" y1="137.2" x2="736.5" y2="1327.8" gradientUnits="userSpaceOnUse"><stop offset="0.1" stop-color="#181914"/><stop offset="0.37" stop-color="#51E076"/><stop offset="0.57" stop-color="#51E076"/><stop offset="0.9" stop-color="#181914"/></linearGradient>
+          <linearGradient id="mg2" x1="736.5" y1="66" x2="736.5" y2="1399" gradientUnits="userSpaceOnUse"><stop offset="0.1" stop-color="#181914"/><stop offset="0.37" stop-color="#51E076"/><stop offset="0.57" stop-color="#51E076"/><stop offset="0.9" stop-color="#181914"/></linearGradient>
+          <linearGradient id="mg3" x1="736.5" y1="0" x2="736.5" y2="1465" gradientUnits="userSpaceOnUse"><stop offset="0.1" stop-color="#181914"/><stop offset="0.37" stop-color="#51E076"/><stop offset="0.57" stop-color="#51E076"/><stop offset="0.9" stop-color="#181914"/></linearGradient>
+        </defs>
+      </svg>
+      <div class="call-mid__content">
+        <h2 class="call-mid__title hidden-fade">Seus resultados começam <em>agora.</em></h2>
+        <p class="call-mid__text hidden-fade">O seu corpo merece treinos baseados em dados: eu transformo dificuldades em planos claros e em ações concretas para o sucesso.</p>
+        <a href="#contato" class="btn hidden-fade" data-arrow>
+          <span>Agendar avaliação</span>
+          <span class="btn__ico"><svg class="a" viewBox="0 0 13 13" fill="none"><path d="M3.49753 5.24707H5.03059V6.78013H3.49753Z" fill="currentColor"/><path d="M5.24695 5.24707H6.78001V6.78013H5.24695Z" fill="currentColor"/><path d="M6.99582 8.74463H8.52888V10.2777H6.99582Z" fill="currentColor"/><path d="M5.24695 10.4937H6.78001V12.0267H5.24695Z" fill="currentColor"/><path d="M5.24695 0H6.78001V1.53306H5.24695Z" fill="currentColor"/><path d="M0 5.24707H1.533V6.78013H0Z" fill="currentColor"/><path d="M1.74863 5.24707H3.28168V6.78013H1.74863Z" fill="currentColor"/><path d="M8.74454 3.49756H10.2776V5.03062H8.74454Z" fill="currentColor"/><path d="M6.99582 5.24707H8.52888V6.78013H6.99582Z" fill="currentColor"/><path d="M8.74454 5.24707H10.2776V6.78013H8.74454Z" fill="currentColor"/><path d="M10.4933 5.24707H12.0263V6.78013H10.4933Z" fill="currentColor"/><path d="M6.99582 1.74902H8.52888V3.28208H6.99582Z" fill="currentColor"/><path d="M8.74454 6.99609H10.2776V8.52915H8.74454Z" fill="currentColor"/></svg>
+          <svg class="b" viewBox="0 0 25 12" fill="none"><path d="M13.4 9.3V7.1h-2.2v2.2h2.2zM9 9.3v2.2h2.2V9.3H9zm2.2-4.4h2.2V2.7h-2.2v2.2zm4.4 0h-2.2v2.2h2.2V4.9zm-4.4-2.2V.5H9v2.2h2.2zM4.4 9.3V7.1H2.2v2.2h2.2zM0 9.3v2.2h2.2V9.3H0zm2.2-4.4h2.2V2.7H2.2v2.2zm4.4 0H4.4v2.2h2.2V4.9zM2.2 2.7V.5H0v2.2h2.2zm20.2 6.6V7.1h-2.2v2.2h2.2zm-4.4 0v2.2h2.2V9.3H18zm2.2-4.4h2.2V2.7h-2.2v2.2zm4.4 0h-2.2v2.2h2.2V4.9zm-4.4-2.2V.5H18v2.2h2.2z" fill="currentColor"/></svg></span>
+        </a>
+      </div>
+    </section>
+
+    <!-- SERVICES / PROGRAMS -->
+    <section class="section" id="programas">
+      <div class="eyebrow"><b>02</b> Programas</div>
+      <div class="services__head">
+        <h2 class="services__title hidden-fade">Eu ofereço serviços <em>direcionados</em> e personalizados.</h2>
+        <p class="services__desc hidden-fade">Eu desenho e implemento soluções sob medida: do desenvolvimento de programas do zero à consultoria em casos específicos, ao treinamento prático do time para você se tornar autônomo no uso do seu próprio corpo.</p>
+      </div>
+      <div class="services__list">
+        <div class="service hidden-fade">
+          <div class="service__media"></div>
+          <p class="service__index">[001]</p>
+          <div>
+            <h3 class="service__name">Strong Built</h3>
+            <div class="service__links">
+              <span class="service__tag">Hipertrofia</span>
+              <span class="service__tag">Força</span>
+            </div>
+          </div>
+          <p class="service__tag">Individual · 12 semanas</p>
+        </div>
+        <div class="service hidden-fade">
+          <div class="service__media"></div>
+          <p class="service__index">[002]</p>
+          <div>
+            <h3 class="service__name">Fit Performance</h3>
+            <div class="service__links">
+              <span class="service__tag">Emagrecimento</span>
+              <span class="service__tag">Condicionamento</span>
+            </div>
+          </div>
+          <p class="service__tag">Individual · 8 semanas</p>
+        </div>
+        <div class="service hidden-fade">
+          <div class="service__media"></div>
+          <p class="service__index">[003]</p>
+          <div>
+            <h3 class="service__name">Mind &amp; Body</h3>
+            <div class="service__links">
+              <span class="service__tag">Nutrição</span>
+              <span class="service__tag">Recuperação</span>
+            </div>
+          </div>
+          <p class="service__tag">Grupo · 4 semanas</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CASE HISTORIES / RESULTS -->
+    <section class="section" id="resultados">
+      <div class="eyebrow"><b>03</b> Resultados</div>
+      <div class="cases__head">
+        <h2 class="cases__title hidden-fade">Transformações selecionadas <em>ao longo dos anos.</em></h2>
+        <p class="cases__desc hidden-fade">Cada aluno conta uma <em>história</em> única de <em>superação</em> e <em>evolução</em>. Descubra como eu transformei <em>desafios</em> em conquistas concretas, melhorando o físico e os <em>resultados</em>.</p>
+      </div>
+      <ul class="cases__list">
+        <li class="case hidden-fade">
+          <p class="case__index">01</p>
+          <p class="case__name">Marcos R.</p>
+          <p class="case__year">[2026]</p>
+          <p class="case__type">Emagrecimento · 18kg</p>
+          <span class="case__arrow"><svg viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </li>
+        <li class="case hidden-fade">
+          <p class="case__index">02</p>
+          <p class="case__name">Pri S.</p>
+          <p class="case__year">[2025]</p>
+          <p class="case__type">Hipertrofia · 8kg de massa</p>
+          <span class="case__arrow"><svg viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </li>
+        <li class="case hidden-fade">
+          <p class="case__index">03</p>
+          <p class="case__name">Leo A.</p>
+          <p class="case__year">[2024]</p>
+          <p class="case__type">Performance · Atleta CrossFit</p>
+          <span class="case__arrow"><svg viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </li>
+        <li class="case hidden-fade">
+          <p class="case__index">04</p>
+          <p class="case__name">Caio D.</p>
+          <p class="case__year">[2023]</p>
+          <p class="case__type">Força · Supino 140kg</p>
+          <span class="case__arrow"><svg viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </li>
+        <li class="case hidden-fade">
+          <p class="case__index">05</p>
+          <p class="case__name">Bia M.</p>
+          <p class="case__year">[2022]</p>
+          <p class="case__type">Reabilitação · Maratona</p>
+          <span class="case__arrow"><svg viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="section" id="depoimentos">
+      <div class="eyebrow"><b>04</b> Depoimentos</div>
+      <h2 class="call-mid__title hidden-fade" style="max-width:16ch">Quem treina comigo <em>evolui</em> todos os dias.</h2>
+      <div class="testi__wrap hidden-fade">
+        <div class="testi__track" id="testiTrack">
+          <div class="testi">
+            <div class="testi__head"><b>Marcos R.</b><span>[2026]</span></div>
+            <p class="testi__text">Ele entendeu as minhas necessidades e me guiou na <em>reestruturação</em> do meu treino. Com o plano certo, otimizamos o tempo e economizei <em>meses de tentativa e erro</em>. Um profissional que realmente faz a diferença!</p>
+            <p class="testi__author">Aluno emagrecimento · 18kg em 10 meses</p>
+          </div>
+          <div class="testi">
+            <div class="testi__head"><b>Pri S.</b><span>[2025]</span></div>
+            <p class="testi__text">Graças ao programa, otimizei meu treino e economizei um tempo precioso. <em>Resultados visíveis</em> já no primeiro ciclo. <em>Recomendo de olhos fechados!</em></p>
+            <p class="testi__author">Aluna hipertrofia · 8kg de massa magra</p>
+          </div>
+          <div class="testi">
+            <div class="testi__head"><b>Leo A.</b><span>[2024]</span></div>
+            <p class="testi__text">O acompanhamento é <em>do nível de atleta</em>. Cargas, cadência, recuperação: tudo periodizado. Ele me fez <em>quebrar recordes</em> pessoais em todas as estações.</p>
+            <p class="testi__author">Atleta CrossFit · ranking estadual</p>
+          </div>
+          <div class="testi">
+            <div class="testi__head"><b>Bia M.</b><span>[2022]</span></div>
+            <p class="testi__text">Voltei de uma lesão grave achando que nunca mais competiria. Com paciência e ciência, ele me levou de <em>reabilitação até uma maratona</em>. Gratidão eterna.</p>
+            <p class="testi__author">Aluna reabilitação · 1ª maratona</p>
+          </div>
+        </div>
+      </div>
+      <div class="testi__nav hidden-fade">
+        <button id="testiPrev" aria-label="Anterior">&#8592;</button>
+        <button id="testiNext" aria-label="Próximo">&#8594;</button>
+      </div>
+    </section>
+
+    <!-- PLANS -->
+    <section class="section" id="planos">
+      <div class="eyebrow"><b>05</b> Planos</div>
+      <h2 class="plans__title hidden-fade">Escolha o marco da sua <em>evolução.</em></h2>
+      <div class="plans__grid">
+        <div class="plan hidden-fade">
+          <p class="plan__name">Start</p>
+          <p class="plan__price">R$180<i>/mês</i></p>
+          <ul class="plan__feat">
+            <li>Acesso livre à <b>área de musculação</b></li>
+            <li>Treino <b>prescrito mensalmente</b></li>
+            <li>Avaliação física <b>a cada 60 dias</b></li>
+            <li>Horário <b>livre</b></li>
+          </ul>
+          <a href="#contato" class="btn" data-arrow><span>Começar</span><span class="btn__ico"><svg class="a" viewBox="0 0 13 13" fill="none"><path d="M5.24695 0H6.78001V1.53306H5.24695Z" fill="currentColor"/><path d="M0 5.24707H1.533V6.78013H0Z" fill="currentColor"/><path d="M5.24695 5.24707H6.78001V6.78013H5.24695Z" fill="currentColor"/><path d="M10.4933 5.24707H12.0263V6.78013H10.4933Z" fill="currentColor"/><path d="M5.24695 10.4937H6.78001V12.0267H5.24695Z" fill="currentColor"/></svg><svg class="b" viewBox="0 0 25 12" fill="none"><path d="M13.4 9.3V7.1h-2.2v2.2h2.2zM9 9.3v2.2h2.2V9.3H9zm2.2-4.4h2.2V2.7h-2.2v2.2zm4.4 0h-2.2v2.2h2.2V4.9zm-4.4-2.2V.5H9v2.2h2.2zM4.4 9.3V7.1H2.2v2.2h2.2zM0 9.3v2.2h2.2V9.3H0zm2.2-4.4h2.2V2.7H2.2v2.2zm4.4 0H4.4v2.2h2.2V4.9zM2.2 2.7V.5H0v2.2h2.2zm20.2 6.6V7.1h-2.2v2.2h2.2zm-4.4 0v2.2h2.2V9.3H18zm2.2-4.4h2.2V2.7h-2.2v2.2zm4.4 0h-2.2v2.2h2.2V4.9zm-4.4-2.2V.5H18v2.2h2.2z" fill="currentColor"/></svg></span></a>
+        </div>
+        <div class="plan plan--featured hidden-fade">
+          <p class="plan__name">Performance</p>
+          <p class="plan__price">R$380<i>/mês</i></p>
+          <ul class="plan__feat">
+            <li>Tudo do <b>Start</b></li>
+            <li><b>4 refeições</b> + protocolo nutricional</li>
+            <li>Treino <b>individualizado semanal</b></li>
+            <li>Acompanhamento <b>1x por semana</b> presencial</li>
+          </ul>
+          <a href="#contato" class="btn" data-arrow><span>Começar</span><span class="btn__ico"><svg class="a" viewBox="0 0 13 13" fill="none"><path d="M5.24695 0H6.78001V1.53306H5.24695Z" fill="currentColor"/><path d="M0 5.24707H1.533V6.78013H0Z" fill="currentColor"/><path d="M5.24695 5.24707H6.78001V6.78013H5.24695Z" fill="currentColor"/><path d="M10.4933 5.24707H12.0263V6.78013H10.4933Z" fill="currentColor"/><path d="M5.24695 10.4937H6.78001V12.0267H5.24695Z" fill="currentColor"/></svg><svg class="b" viewBox="0 0 25 12" fill="none"><path d="M13.4 9.3V7.1h-2.2v2.2h2.2zM9 9.3v2.2h2.2V9.3H9zm2.2-4.4h2.2V2.7h-2.2v2.2zm4.4 0h-2.2v2.2h2.2V4.9zm-4.4-2.2V.5H9v2.2h2.2zM4.4 9.3V7.1H2.2v2.2h2.2zM0 9.3v2.2h2.2V9.3H0zm2.2-4.4h2.2V2.7H2.2v2.2zm4.4 0H4.4v2.2h2.2V4.9zM2.2 2.7V.5H0v2.2h2.2zm20.2 6.6V7.1h-2.2v2.2h2.2zm-4.4 0v2.2h2.2V9.3H18zm2.2-4.4h2.2V2.7h-2.2v2.2zm4.4 0h-2.2v2.2h2.2V4.9zm-4.4-2.2V.5H18v2.2h2.2z" fill="currentColor"/></svg></span></a>
+        </div>
+        <div class="plan hidden-fade">
+          <p class="plan__name">Elite</p>
+          <p class="plan__price">R$680<i>/mês</i></p>
+          <ul class="plan__feat">
+            <li>Tudo do <b>Performance</b></li>
+            <li>Coaching <b>online 24/7</b></li>
+            <li>Protocolo por <b>objetivo esportivo</b></li>
+            <li>Você <b>nunca treina sozinho</b></li>
+          </ul>
+          <a href="#contato" class="btn" data-arrow><span>Começar</span><span class="btn__ico"><svg class="a" viewBox="0 0 13 13" fill="none"><path d="M5.24695 0H6.78001V1.53306H5.24695Z" fill="currentColor"/><path d="M0 5.24707H1.533V6.78013H0Z" fill="currentColor"/><path d="M5.24695 5.24707H6.78001V6.78013H5.24695Z" fill="currentColor"/><path d="M10.4933 5.24707H12.0263V6.78013H10.4933Z" fill="currentColor"/><path d="M5.24695 10.4937H6.78001V12.0267H5.24695Z" fill="currentColor"/></svg><svg class="b" viewBox="0 0 25 12" fill="none"><path d="M13.4 9.3V7.1h-2.2v2.2h2.2zM9 9.3v2.2h2.2V9.3H9zm2.2-4.4h2.2V2.7h-2.2v2.2zm4.4 0h-2.2v2.2h2.2V4.9zm-4.4-2.2V.5H9v2.2h2.2zM4.4 9.3V7.1H2.2v2.2h2.2zM0 9.3v2.2h2.2V9.3H0zm2.2-4.4h2.2V2.7H2.2v2.2zm4.4 0H4.4v2.2h2.2V4.9zM2.2 2.7V.5H0v2.2h2.2zm20.2 6.6V7.1h-2.2v2.2h2.2zm-4.4 0v2.2h2.2V9.3H18zm2.2-4.4h2.2V2.7h-2.2v2.2zm4.4 0h-2.2v2.2h2.2V4.9zm-4.4-2.2V.5H18v2.2h2.2z" fill="currentColor"/></svg></span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section" id="contato">
+      <div class="eyebrow"><b>06</b> Contato</div>
+      <div class="contact__grid">
+        <div class="contact__side">
+          <h2 class="hidden-fade">Comece uma conversa sobre um novo <em>objetivo</em> ou um novo <em>corpo.</em></h2>
+          <div class="contact__info hidden-fade">
+            <div class="ci"><span>Email</span><b><a href="mailto:contato@forja.ac">contato@forja.ac</a></b></div>
+            <div class="ci"><span>WhatsApp</span><b><a href="tel:+5511987654321">+55 11 98765 4321</a></b></div>
+            <div class="ci"><span>Endereço</span><b>Rua Força Vital, 100 · Vila Olímpia · São Paulo/SP</b></div>
+            <div class="ci"><span>Horário</span><b>Seg a Sáb · 6h às 22h</b></div>
+          </div>
+        </div>
+        <form class="form hidden-fade" id="form">
+          <div class="field"><label for="name">Nome completo</label><input type="text" id="name" required></div>
+          <div class="field"><label for="email">Email</label><input type="email" id="email" placeholder="voce@email.com" required></div>
+          <div class="field"><label for="phone">Telefone</label><input type="tel" id="phone" placeholder="+55 11 99999 9999"></div>
+          <div class="field">
+            <label for="service">Objetivo</label>
+            <select id="service">
+              <option>Hipertrofia e força</option>
+              <option>Emagrecimento</option>
+              <option>Condicionamento geral</option>
+              <option>Nutrição e recuperação</option>
+              <option>Preparo esportivo</option>
+            </select>
+          </div>
+          <div class="field"><label for="msg">Mensagem</label><textarea id="msg" rows="3" placeholder="Descreva seu objetivo..."></textarea></div>
+          <button class="btn" type="submit" id="submitBtn"><span>Enviar mensagem</span><span class="btn__ico"><svg class="a" viewBox="0 0 13 13" fill="none"><path d="M5.24695 0H6.78001V1.53306H5.24695Z" fill="currentColor"/><path d="M0 5.24707H1.533V6.78013H0Z" fill="currentColor"/><path d="M5.24695 5.24707H6.78001V6.78013H5.24695Z" fill="currentColor"/><path d="M10.4933 5.24707H12.0263V6.78013H10.4933Z" fill="currentColor"/><path d="M5.24695 10.4937H6.78001V12.0267H5.24695Z" fill="currentColor"/></svg><svg class="b" viewBox="0 0 25 12" fill="none"><path d="M13.4 9.3V7.1h-2.2v2.2h2.2zM9 9.3v2.2h2.2V9.3H9zm2.2-4.4h2.2V2.7h-2.2v2.2zm4.4 0h-2.2v2.2h2.2V4.9zm-4.4-2.2V.5H9v2.2h2.2zM4.4 9.3V7.1H2.2v2.2h2.2zM0 9.3v2.2h2.2V9.3H0zm2.2-4.4h2.2V2.7H2.2v2.2zm4.4 0H4.4v2.2h2.2V4.9zM2.2 2.7V.5H0v2.2h2.2zm20.2 6.6V7.1h-2.2v2.2h2.2zm-4.4 0v2.2h2.2V9.3H18zm2.2-4.4h2.2V2.7h-2.2v2.2zm4.4 0h-2.2v2.2h2.2V4.9zm-4.4-2.2V.5H18v2.2h2.2z" fill="currentColor"/></svg></span></button>
+          <p id="formMsg" style="color:var(--green);font-size:14px;display:none">Mensagem enviada! Em breve entraremos em contato.</p>
+        </form>
+      </div>
+    </section>
+
+    <!-- BIG CTA -->
+    <section class="section call-big" id="cta">
+      <svg class="call-big__rings" viewBox="0 0 1473 1473" fill="none" preserveAspectRatio="none">
+        <circle cx="736.5" cy="732.5" r="594.687" stroke="url(#bg1)" stroke-width="1.13707"/>
+        <circle cx="736.5" cy="732.5" r="665.924" stroke="url(#bg2)" stroke-width="1.15171"/>
+        <circle cx="736.5" cy="732.5" r="731.867" stroke="url(#bg3)" stroke-width="1.26576" shape-rendering="crispEdges"/>
+        <defs>
+          <linearGradient id="bg1" x1="736.5" y1="137.2" x2="736.5" y2="1327.8" gradientUnits="userSpaceOnUse"><stop offset="0.1" stop-color="#181914"/><stop offset="0.37" stop-color="#51E076"/><stop offset="0.57" stop-color="#51E076"/><stop offset="0.9" stop-color="#181914"/></linearGradient>
+          <linearGradient id="bg2" x1="736.5" y1="66" x2="736.5" y2="1399" gradientUnits="userSpaceOnUse"><stop offset="0.1" stop-color="#181914"/><stop offset="0.37" stop-color="#51E076"/><stop offset="0.57" stop-color="#51E076"/><stop offset="0.9" stop-color="#181914"/></linearGradient>
+          <linearGradient id="bg3" x1="736.5" y1="0" x2="736.5" y2="1465" gradientUnits="userSpaceOnUse"><stop offset="0.1" stop-color="#181914"/><stop offset="0.37" stop-color="#51E076"/><stop offset="0.57" stop-color="#51E076"/><stop offset="0.9" stop-color="#181914"/></linearGradient>
+        </defs>
+      </svg>
+      <div class="call-big__content">
+        <h2 class="call-big__title hidden-fade">Eleve o seu corpo ao próximo <em>nível.</em></h2>
+        <p class="call-big__text hidden-fade">Seu corpo já tem as respostas. Você só precisa da forma certa de treinar.</p>
+        <a href="#contato" class="btn hidden-fade" data-arrow>
+          <span>Agendar avaliação</span>
+          <span class="btn__ico"><svg class="a" viewBox="0 0 13 13" fill="none"><path d="M5.24695 0H6.78001V1.53306H5.24695Z" fill="currentColor"/><path d="M0 5.24707H1.533V6.78013H0Z" fill="currentColor"/><path d="M5.24695 5.24707H6.78001V6.78013H5.24695Z" fill="currentColor"/><path d="M10.4933 5.24707H12.0263V6.78013H10.4933Z" fill="currentColor"/><path d="M5.24695 10.4937H6.78001V12.0267H5.24695Z" fill="currentColor"/></svg><svg class="b" viewBox="0 0 25 12" fill="none"><path d="M13.4 9.3V7.1h-2.2v2.2h2.2zM9 9.3v2.2h2.2V9.3H9zm2.2-4.4h2.2V2.7h-2.2v2.2zm4.4 0h-2.2v2.2h2.2V4.9zm-4.4-2.2V.5H9v2.2h2.2zM4.4 9.3V7.1H2.2v2.2h2.2zM0 9.3v2.2h2.2V9.3H0zm2.2-4.4h2.2V2.7H2.2v2.2zm4.4 0H4.4v2.2h2.2V4.9zM2.2 2.7V.5H0v2.2h2.2zm20.2 6.6V7.1h-2.2v2.2h2.2zm-4.4 0v2.2h2.2V9.3H18zm2.2-4.4h2.2V2.7h-2.2v2.2zm4.4 0h-2.2v2.2h2.2V4.9zm-4.4-2.2V.5H18v2.2h2.2z" fill="currentColor"/></svg></span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- MARQUEE -->
+  <div class="marquee">
+    <div class="marquee__track">
+      <div class="marquee__item">
+        <span>Treine comigo</span><svg class="star" viewBox="0 0 25 12" fill="none"><path d="M13.4 9.3V7.1h-2.2v2.2h2.2zM9 9.3v2.2h2.2V9.3H9zm2.2-4.4h2.2V2.7h-2.2v2.2zm4.4 0h-2.2v2.2h2.2V4.9zm-4.4-2.2V.5H9v2.2h2.2zM4.4 9.3V7.1H2.2v2.2h2.2zM0 9.3v2.2h2.2V9.3H0zm2.2-4.4h2.2V2.7H2.2v2.2zm4.4 0H4.4v2.2h2.2V4.9zM2.2 2.7V.5H0v2.2h2.2zm20.2 6.6V7.1h-2.2v2.2h2.2zm-4.4 0v2.2h2.2V9.3H18zm2.2-4.4h2.2V2.7h-2.2v2.2zm4.4 0h-2.2v2.2h2.2V4.9zm-4.4-2.2V.5H18v2.2h2.2z" fill="currentColor"/></svg>
+        <span>Treine comigo</span><svg class="star" viewBox="0 0 25 12" fill="none"><path d="M13.4 9.3V7.1h-2.2v2.2h2.2zM9 9.3v2.2h2.2V9.3H9zm2.2-4.4h2.2V2.7h-2.2v2.2zm4.4 0h-2.2v2.2h2.2V4.9zm-4.4-2.2V.5H9v2.2h2.2zM4.4 9.3V7.1H2.2v2.2h2.2zM0 9.3v2.2h2.2V9.3H0zm2.2-4.4h2.2V2.7H2.2v2.2zm4.4 0H4.4v2.2h2.2V4.9zM2.2 2.7V.5H0v2.2h2.2zm20.2 6.6V7.1h-2.2v2.2h2.2zm-4.4 0v2.2h2.2V9.3H18zm2.2-4.4h2.2V2.7h-2.2v2.2zm4.4 0h-2.2v2.2h2.2V4.9zm-4.4-2.2V.5H18v2.2h2.2z" fill="currentColor"/></svg>
+        <span>Treine comigo</span><svg class="star" viewBox="0 0 25 12" fill="none"><path d="M13.4 9.3V7.1h-2.2v2.2h2.2zM9 9.3v2.2h2.2V9.3H9zm2.2-4.4h2.2V2.7h-2.2v2.2zm4.4 0h-2.2v2.2h2.2V4.9zm-4.4-2.2V.5H9v2.2h2.2zM4.4 9.3V7.1H2.2v2.2h2.2zM0 9.3v2.2h2.2V9.3H0zm2.2-4.4h2.2V2.7H2.2v2.2zm4.4 0H4.4v2.2h2.2V4.9zM2.2 2.7V.5H0v2.2h2.2zm20.2 6.6V7.1h-2.2v2.2h2.2zm-4.4 0v2.2h2.2V9.3H18zm2.2-4.4h2.2V2.7h-2.2v2.2zm4.4 0h-2.2v2.2h2.2V4.9zm-4.4-2.2V.5H18v2.2h2.2z" fill="currentColor"/></svg>
+      </div>
+      <div class="marquee__item">
+        <span>Treine comigo</span><svg class="star" viewBox="0 0 25 12" fill="none"><path d="M13.4 9.3V7.1h-2.2v2.2h2.2zM9 9.3v2.2h2.2V9.3H9zm2.2-4.4h2.2V2.7h-2.2v2.2zm4.4 0h-2.2v2.2h2.2V4.9zm-4.4-2.2V.5H9v2.2h2.2zM4.4 9.3V7.1H2.2v2.2h2.2zM0 9.3v2.2h2.2V9.3H0zm2.2-4.4h2.2V2.7H2.2v2.2zm4.4 0H4.4v2.2h2.2V4.9zM2.2 2.7V.5H0v2.2h2.2zm20.2 6.6V7.1h-2.2v2.2h2.2zm-4.4 0v2.2h2.2V9.3H18zm2.2-4.4h2.2V2.7h-2.2v2.2zm4.4 0h-2.2v2.2h2.2V4.9zm-4.4-2.2V.5H18v2.2h2.2z" fill="currentColor"/></svg>
+        <span>Treine comigo</span><svg class="star" viewBox="0 0 25 12" fill="none"><path d="M13.4 9.3V7.1h-2.2v2.2h2.2zM9 9.3v2.2h2.2V9.3H9zm2.2-4.4h2.2V2.7h-2.2v2.2zm4.4 0h-2.2v2.2h2.2V4.9zm-4.4-2.2V.5H9v2.2h2.2zM4.4 9.3V7.1H2.2v2.2h2.2zM0 9.3v2.2h2.2V9.3H0zm2.2-4.4h2.2V2.7H2.2v2.2zm4.4 0H4.4v2.2h2.2V4.9zM2.2 2.7V.5H0v2.2h2.2zm20.2 6.6V7.1h-2.2v2.2h2.2zm-4.4 0v2.2h2.2V9.3H18zm2.2-4.4h2.2V2.7h-2.2v2.2zm4.4 0h-2.2v2.2h2.2V4.9zm-4.4-2.2V.5H18v2.2h2.2z" fill="currentColor"/></svg>
+        <span>Treine comigo</span><svg class="star" viewBox="0 0 25 12" fill="none"><path d="M13.4 9.3V7.1h-2.2v2.2h2.2zM9 9.3v2.2h2.2V9.3H9zm2.2-4.4h2.2V2.7h-2.2v2.2zm4.4 0h-2.2v2.2h2.2V4.9zm-4.4-2.2V.5H9v2.2h2.2zM4.4 9.3V7.1H2.2v2.2h2.2zM0 9.3v2.2h2.2V9.3H0zm2.2-4.4h2.2V2.7H2.2v2.2zm4.4 0H4.4v2.2h2.2V4.9zM2.2 2.7V.5H0v2.2h2.2zm20.2 6.6V7.1h-2.2v2.2h2.2zm-4.4 0v2.2h2.2V9.3H18zm2.2-4.4h2.2V2.7h-2.2v2.2zm4.4 0h-2.2v2.2h2.2V4.9zm-4.4-2.2V.5H18v2.2h2.2z" fill="currentColor"/></svg>
+        <span>Treine comigo</span><svg class="star" viewBox="0 0 25 12" fill="none"><path d="M13.4 9.3V7.1h-2.2v2.2h2.2zM9 9.3v2.2h2.2V9.3H9zm2.2-4.4h2.2V2.7h-2.2v2.2zm4.4 0h-2.2v2.2h2.2V4.9zm-4.4-2.2V.5H9v2.2h2.2zM4.4 9.3V7.1H2.2v2.2h2.2zM0 9.3v2.2h2.2V9.3H0zm2.2-4.4h2.2V2.7H2.2v2.2zm4.4 0H4.4v2.2h2.2V4.9zM2.2 2.7V.5H0v2.2h2.2zm20.2 6.6V7.1h-2.2v2.2h2.2zm-4.4 0v2.2h2.2V9.3H18zm2.2-4.4h2.2V2.7h-2.2v2.2zm4.4 0h-2.2v2.2h2.2V4.9zm-4.4-2.2V.5H18v2.2h2.2z" fill="currentColor"/></svg>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__main">
+      <div>
+        <p class="footer__label">Contact Information</p>
+        <div class="contact__info" style="margin-top:0">
+          <div class="ci"><span>Email</span><b><a href="mailto:contato@forja.ac">contato@forja.ac</a></b></div>
+          <div class="ci"><span>WhatsApp</span><b><a href="tel:+5511987654321">+55 11 98765 4321</a></b></div>
+        </div>
+      </div>
+      <nav class="footer__nav">
+        <a class="fn" href="#sobre"><span>01</span><b>Sobre</b><span class="arw"><svg viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+        <a class="fn" href="#programas"><span>02</span><b>Programas</b><span class="arw"><svg viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+        <a class="fn" href="#resultados"><span>03</span><b>Resultados</b><span class="arw"><svg viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+        <a class="fn" href="#contato"><span>04</span><b>Contato</b><span class="arw"><svg viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+      </nav>
+    </div>
+    <div class="footer__end">
+      <ul class="links">
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Cookie Policy</a></li>
+        <li><a href="#">Instagram</a></li>
+      </ul>
+      <p>&copy; 2026 Academia FORJA · Todos os direitos reservados</p>
+    </div>
+  </footer>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
